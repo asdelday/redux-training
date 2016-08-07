@@ -37,14 +37,14 @@
       * Using `applyMiddleware` function create a `finalCreateStore` variable
       * Create the `store` using `finalCreateStore` and passing it the `rootReducer` and the `initialState`
       * Make Redux reducers hot-loadable in development:
-        ```javascript
-        if (process.env.NODE_ENV === 'development') {
-          module.hot.accept('./modules/root', () => {
-            store.replaceReducer(require('./modules/root').default);
-          });
-        }
-        ```
-        * Return the store
+      ```javascript
+      if (process.env.NODE_ENV === 'development') {
+        module.hot.accept('./modules/root', () => {
+          store.replaceReducer(require('./modules/root').default);
+        });
+      }
+      ```
+      * Return the store
         
   * At `./src/client.js` file:
     * Import `Provider` from `react-redux`
