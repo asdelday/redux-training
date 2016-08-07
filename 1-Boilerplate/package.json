@@ -10,7 +10,7 @@
   },
   "license": "ISC",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack/dev.config.js",
+    "dev": "webpack-dev-server --hot --inline --config webpack/dev.config.js",
     "build": "webpack --config webpack/prod.config.js"
   },
   "devDependencies": {
