@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { Router, browserHistory } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
 
 import './main.scss';
 import createStore from './redux/createStore';
-import { App } from './containers';
+import getRoutes from './routes.jsx';
 
 const store = createStore();
+const history = syncHistoryWithStore(browserHistory, store);
 
-let component = <App />;
+let component = <Router history={history}>{getRoutes()}</Router>;
 if (process.env.NODE_ENV === 'development') {
   const DevTools = require('./containers/DevTools').default;
 

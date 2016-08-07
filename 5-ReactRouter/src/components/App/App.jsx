@@ -1,10 +1,12 @@
 import React, { PropTypes, Component } from 'react';
-import './App.scss';
+import { IndexLink, Link } from 'react-router';
+import styles from './App.scss';
 
 export default class App extends Component {
   static propTypes = {
     fontSize: PropTypes.string,
     changeFontSize: PropTypes.func,
+    children: PropTypes.node,
   };
 
   static defaultProps = {
@@ -26,13 +28,22 @@ export default class App extends Component {
   render() {
     const { fontSize } = this.props;
     const style = { fontSize };
+    const activeStyle = {
+      color: 'red',
+      fontWeight: 'bold',
+    };
 
     return (
-      <div className="App" style={style}>
+      <div className={styles.root} style={style}>
         <button onClick={() => this._changeFontSize(1)}>A+</button>
         <button onClick={() => this._changeFontSize(-1)}>A-</button>
 
-        <div>Hello World!</div>
+        <IndexLink to="/" activeStyle={activeStyle}>List</IndexLink>
+        <Link to="/details" activeStyle={activeStyle}>Details</Link>
+
+        <div className={styles.container}>
+          {this.props.children}
+        </div>
       </div>
     );
   }
