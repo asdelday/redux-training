@@ -7,12 +7,7 @@ process.env.BABEL_ENV = 'development';
 module.exports = {
   devtool: 'inline-source-map',
   context: path.resolve(__dirname, '..'),
-  entry: [
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
-    'react-hot-loader/patch',
-    './src/client.jsx',
-  ],
+  entry: './src/client.jsx',
   output: {
     path: path.join(__dirname, '../dist'),
     filename: 'bundle.js',
@@ -32,7 +27,6 @@ module.exports = {
     extensions: ['', '.json', '.js', '.jsx'],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env': { 'NODE_ENV': JSON.stringify('development') },
     }),
