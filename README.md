@@ -6,6 +6,6 @@ Project with the purpose of teach step by step how to build web applications wit
 
 [2. Redux Implementation](2-ReduxImplementation)
 
-[3. Redux Middleware](2-ReduxMiddleware)
+[3. Redux Middleware](3-ReduxMiddleware)
 
-[4. Redux DevTools](2-ReduxDevTools)
+[4. Redux DevTools](4-ReduxDevTools)
