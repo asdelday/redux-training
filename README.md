@@ -13,3 +13,5 @@ Project with the purpose of teach step by step how to build web applications wit
 [5. React Router](5-ReactRouter)
 
 [6. Refactor and Styles](6-RefactorAndStyles)
+
+[7. Heroes Module](7-HeroesModule)
