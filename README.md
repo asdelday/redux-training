@@ -15,3 +15,5 @@ Project with the purpose of teach step by step how to build web applications wit
 [6. Refactor and Styles](6-RefactorAndStyles)
 
 [7. Heroes Module](7-HeroesModule)
+
+[8. Connect Heroes Module](8-ConnectHeroesModule)
