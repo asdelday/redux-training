@@ -20,10 +20,10 @@
     * Export as default a function which return a JSX with all the routes
     
   * At `./src/client.jsx`:
-    * Import `Router` and `browserHistory` from `react-router`
+    * Import `Router` and `hashHistory` from `react-router`
     * Import `syncHistoryWithStore` from `react-router-redux`
     * Import `getRoutes` from `./src/routes.jsx`
-    * Create a `history` by this way: `const history = syncHistoryWithStore(browserHistory, store);`
+    * Create a `history` by this way: `const history = syncHistoryWithStore(hashHistory, store);`
     * At the component variable, replace `App` by `<Router history={history}>{getRoutes()}</Router>`
 
   * At `./src/redux/modules/root.js`:
