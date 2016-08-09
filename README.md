@@ -19,3 +19,10 @@ Project with the purpose of teach step by step how to build web applications wit
 [8. Connect Heroes Module](8-ConnectHeroesModule)
 
 [9. API Services](9-APIServices)
+
+[10. Promise Middleware](10-PromiseMiddleware)
+
+
+### Slides
+
+[Redux Slides](https://docs.google.com/presentation/d/11e_91HlyxA3YDPUQnhzBXxmcdYCH2T8DHnHaYHNsrnA/edit?usp=sharing)
