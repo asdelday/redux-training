@@ -1,0 +1,22 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": ["", ".json", ".js", ".jsx"],
+        "moduleDirectory": ["src", "node_modules"]
+      }
+    }
+  },
+  "rules": {
+    "no-underscore-dangle": [0],
+    "global-require": [0],
+    "linebreak-style": [0],
+    "import/no-extraneous-dependencies": [0]
+  },
+}

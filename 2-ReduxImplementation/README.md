@@ -38,7 +38,7 @@
       * Create the `store` using `finalCreateStore` and passing it the `rootReducer` and the `initialState`
       * Make Redux reducers hot-loadable in development:
       ```javascript
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV === 'development' && module.hot) {
         module.hot.accept('./modules/root', () => {
           store.replaceReducer(require('./modules/root').default);
         });

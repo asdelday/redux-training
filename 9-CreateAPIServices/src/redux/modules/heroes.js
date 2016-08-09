@@ -1,3 +1,5 @@
+import { getHeroes as getHeroesRequest, getHero as getHeroRequest } from '../../api';
+
 export const SELECT_HERO = 'redux-training/heroes/SELECT_HERO';
 export const GET_HEROES = 'redux-training/heroes/GET_HEROES';
 export const GET_HEROES_SUCCESS = 'redux-training/heroes/GET_HEROES_SUCCESS';
@@ -54,13 +56,13 @@ export function selectHero(hero) {
 export function getHeroes(data) {
   return {
     types: [GET_HEROES, GET_HEROES_SUCCESS, GET_HEROES_FAIL],
-    promise: new Promise((resolve) => resolve(data)), // TODO
+    promise: () => getHeroesRequest(data),
   };
 }
 
 export function getHero(data) {
   return {
     types: [GET_HEROES, GET_HEROES_SUCCESS, GET_HEROES_FAIL],
-    promise: new Promise((resolve) => resolve(data)), // TODO
+    promise: () => getHeroRequest(data),
   };
 }

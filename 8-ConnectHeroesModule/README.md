@@ -14,4 +14,5 @@
   
   * At `./src/containers/HeroDetails.jsx` container:
     * Map to props the `heroSelected` from the Heroes module.
+    * Import and pass into the connect the following actions from the heroes module: `getHero`.
     * Add to its respective `./src/components/HeroDetails.jsx` component the PropTypes.

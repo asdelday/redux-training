@@ -1,0 +1,94 @@
+.root {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.nav {
+  display: flex;
+  flex-flow: row nowrap;
+  background: #222;
+}
+
+.links {
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 1;
+}
+
+.link {
+  position: relative;
+  padding: 10px;
+  text-decoration: none;
+  color: #DDD;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &:hover, &--active {
+    color: white;
+  }
+
+  &--active {
+    background: #333;
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 3px;
+      bottom: -3px;
+      right: 0;
+      left: 0;
+      background-color: #cc7a6f;
+    }
+  }
+}
+
+.appActions {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.incrementFontSize, .decrementFontSize {
+  font-weight: 800;
+  background: transparent;
+  border: none;
+  color: #DDD;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.container {
+  flex-grow: 1;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+/* DEVICES HANDLING
+================================================================================================= */
+.nav, .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 600px) {
+  .nav, .container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav, .container {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}

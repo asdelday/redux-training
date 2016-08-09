@@ -13,8 +13,8 @@
 ### Steps:
 
   * Create the `./src/redux/modules/heroes.js` module:
-    * With the following actionTypes: `SELECT_HERO`, `GET_HEROES`, `GET_HEROES_SUCCESS` and `GET_HEROES_FAIL`
+    * With the following actionTypes: `SELECT_HERO`, `GET_HEROES`, `GET_HEROES_SUCCESS`, `GET_HEROES_FAIL`, `GET_HERO`, `GET_HERO_SUCCESS` and `GET_HERO_FAIL`
     * With a reducer which handle all the actionTypes
-    * With two actions: `selectHero` and `getHeroes`
+    * With two actions: `selectHero`, `getHeroes` and `getHero`
     
   * Import the new module at `./src/redux/modules/root.js` and combine it with the other reducers.
