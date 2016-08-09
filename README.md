@@ -22,6 +22,8 @@ Project with the purpose of teach step by step how to build web applications wit
 
 [10. Promise Middleware](10-PromiseMiddleware)
 
+[11. Get Heroes](11-GetHeroes)
+
 
 ### Slides
 

@@ -18,9 +18,10 @@ function getParams(params = {}) {
   ).join('&');
 }
 
-export const getHeroes = (heroId) => new Promise((resolve, reject) => {
-  const BASE_URL = 'http://gateway.marvel.com:80/v1/public/characters/';
-  const url = `${BASE_URL}${heroId}?apikey=${API_KEY}`;
+export const getHeroes = (params = {}) => new Promise((resolve, reject) => {
+  const BASE_URL = 'http://gateway.marvel.com:80/v1/public/characters';
+  const formattedParams = getParams(params);
+  const url = `${BASE_URL}?${formattedParams}${formattedParams ? '&' : ''}apikey=${API_KEY}`;
 
   fetch(url)
     .then(checkStatus)
@@ -32,10 +33,9 @@ export const getHeroes = (heroId) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export const getHero = (params = {}) => new Promise((resolve, reject) => {
-  const BASE_URL = 'http://gateway.marvel.com:80/v1/public/character';
-  const formattedParams = getParams(params);
-  const url = `${BASE_URL}?${formattedParams}${formattedParams ? '&' : ''}apikey=${API_KEY}`;
+export const getHero = (heroId) => new Promise((resolve, reject) => {
+  const BASE_URL = 'http://gateway.marvel.com:80/v1/public/characters/';
+  const url = `${BASE_URL}${heroId}?apikey=${API_KEY}`;
 
   fetch(url)
     .then(checkStatus)
