@@ -1,4 +1,8 @@
-const API_KEY = '3b4bf5d1b73844a46d25e5d15bbbde79';
+import { API_KEY } from './config';
+
+if (!API_KEY) {
+  console.warn('You should write your MARVEL API KEY at "src/config.js" file'); // eslint-disable-line no-console, max-len
+}
 
 function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) return response;

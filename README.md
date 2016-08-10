@@ -24,6 +24,10 @@ Project with the purpose of teach step by step how to build web applications wit
 
 [11. Get Heroes](11-GetHeroes)
 
+[12. Show Hero List](12-ShowHeroList)
+
+[13. Show Hero Details](13-ShowHeroDetails)
+
 
 ### Slides
 

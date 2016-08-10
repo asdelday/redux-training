@@ -6,6 +6,7 @@ export default class HeroList extends Component {
     heroList: PropTypes.array,
     heroSelected: PropTypes.object,
     isLoading: PropTypes.bool,
+    isLoaded: PropTypes.bool,
     error: PropTypes.object,
     getHeroes: PropTypes.func,
     selectHero: PropTypes.func,
@@ -16,8 +17,8 @@ export default class HeroList extends Component {
   };
 
   componentWillMount() {
-    const { getHeroes } = this.props;
-    if (typeof getHeroes === 'function') getHeroes();
+    const { getHeroes, isLoaded } = this.props;
+    if (!isLoaded && typeof getHeroes === 'function') getHeroes();
   }
 
   _renderHeroList() {

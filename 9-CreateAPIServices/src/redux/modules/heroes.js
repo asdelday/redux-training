@@ -12,6 +12,7 @@ const initialState = {
   heroSelected: null,
   heroList: [],
   isLoading: false,
+  isLoaded: false,
   error: null,
 };
 
@@ -28,7 +29,7 @@ export default function reducer(state = initialState, action = {}) {
       return { ...state, isLoading: true };
 
     case GET_HEROES_SUCCESS:
-      return { ...state, isLoading: false, error: null, heroList: action.result };
+      return { ...state, isLoading: false, isLoaded: true, error: null, heroList: action.result };
 
     case GET_HEROES_FAIL:
       return { ...state, isLoading: false, error: action.error, heroList: [] };

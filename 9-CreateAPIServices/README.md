@@ -8,8 +8,11 @@
   * Install `fetch`: `npm i -S whatwg-fetch`
   
   * At `./src/client.jsx` file, import `whatwg-fetch` at the beginning of the file
+  
+  * At `./src/config.js` file, export your Marvel API `API_KEY`
 
   * At `./src/api.js` file:
+    * Import the API_KEY from the `config.js` file
     * Export the method `getHeroes`, which can receive an object with params and returns a Promise
     * Export the method `getHero`, which can receive an object with params and returns a Promise
 

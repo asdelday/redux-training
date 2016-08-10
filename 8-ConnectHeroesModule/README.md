@@ -8,7 +8,7 @@
 ### Steps:
 
   * At `./src/containers/HeroList.jsx` container:
-    * Map to props the `heroList`, `heroSelected`, `isLoading` and `error` from the Heroes module.
+    * Map to props the `heroList`, `heroSelected`, `isLoading`, `isLoaded` and `error` from the Heroes module.
     * Import and pass into the connect the following actions from the heroes module: `selectHero` and `getHeroes`.
     * Add to its respective `./src/components/HeroList.jsx` component the PropTypes.
   

@@ -5,6 +5,6 @@
   
 ### Steps:
 
-  * At `./src/components/heroList.jsx`:
-    * At `componentWillMount` test getHeroes action
+  * At `./src/components/HeroList.jsx`:
+    * At `componentWillMount` dispatch getHeroes action if isLoaded prop is false
     * At `render` method print heroList

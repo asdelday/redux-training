@@ -7,6 +7,7 @@
       * a selectedHero<object>
       * a heroList<array>
       * isLoading<boolean>
+      * isLoaded<boolean>
       * error<object>
     
   

@@ -6,6 +6,7 @@ const mapStateToProps = (state) => ({
   heroList: state.heroes.heroList,
   heroSelected: state.heroes.heroSelected,
   isLoading: state.heroes.isLoading,
+  isLoaded: state.heroes.isLoaded,
   error: state.heroes.error,
 });
 
